@@ -3,4 +3,4 @@ services:
     name: stock-analysis-app
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: streamlit run app.py
+    startCommand: streamlit run previsao.py
