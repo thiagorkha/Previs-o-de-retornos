@@ -25,7 +25,7 @@ def analyze_stock_with_prophet(stock_ticker, forecast_horizon=15, test_size=0.2)
     start_date = (datetime.today() - timedelta(days=730)).strftime('%Y-%m-%d')
     
     try:
-        data = yf.download(stock_ticker, start=start_date, end=end_date)['Close']
+        data = yf.download(stock_ticker, start=start_date, end=end_date)['Adj Close']
     except Exception as e:
         st.error(f"Erro ao baixar dados para {stock_ticker}: {e}")
         return
